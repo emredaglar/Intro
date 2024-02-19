@@ -40,13 +40,7 @@ else
 //    Console.WriteLine(courses[i].Name + "/" + courses[i].Description);
 //}
 
-CourseManager courseManager = new(new CourseDal());
-List<Course> courses = courseManager.GetAll();
 
-for (int i = 0;i < courses.Count; i++) {
-
-    Console.WriteLine(courses[i].Name + "/" + courses[i].Price);
-}
 
 
 Console.WriteLine("Kod Bitti");
@@ -63,4 +57,14 @@ BaseCustomer[] customers = { customer1 };
 foreach(BaseCustomer customer in customers)
 {
     Console.WriteLine(customer.CustomerNumber);
+}
+
+
+CourseManager courseManager = new(new CourseDal());
+List<Course> courses = courseManager.GetAll();
+
+for (int i = 0; i < courses.Count; i++)
+{
+
+    Console.WriteLine(courses[i].Name + "/" + courses[i].Price);
 }
